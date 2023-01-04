@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coordinates Revealer</title>
+</head>
+<body>
+  <h1>Enter the PIN to reveal the coordinates:</h1>
+  <form>
+    <input type="password" id="pin" name="pin">
+    <button type="button" onclick="checkPin()">Submit</button>
+  </form>
+  <p id="result"></p>
+
+  <script>
+    function checkPin() {
+      // Store the correct PIN code in a variable
+      const correctPin = '1234';
+
+      // Get the user's input
+      const userPin = document.getElementById('pin').value;
+
+      // Check if the PIN codes match
+      if (userPin === correctPin) {
+        // If the PIN codes match, reveal the coordinates
+        document.getElementById('result').innerHTML = 'The coordinates are: 47.03368051050002, 15.413716969222785';
+      } else {
+        // If the PIN codes don't match, display an error message
+        document.getElementById('result').innerHTML = 'Sorry, that is not the correct PIN.';
+      }
+    }
+  </script>
+</body>
+</html>
