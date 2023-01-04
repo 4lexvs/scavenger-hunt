@@ -74,8 +74,16 @@
     }
   }
   
-  function animateConfetti(confetti) {
-    var top = Math.random() * 100;
-    var left = Math.random() * 100;
-    var size = Math.random() * 5 +
+function animateConfetti(confetti) {
+  var top = Math.random() * 100;
+  var left = Math.random() * 100;
+  var size = Math.random() * 5 + 5;
+  confetti.style.width = size + 'px';
+  confetti.style.height = size + 'px';
+  confetti.style.top = top + '%';
+  confetti.style.left = left + '%';
+  setTimeout(function() {
+    confetti.remove();
+  }, 3000);
+}
 
